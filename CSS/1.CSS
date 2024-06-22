@@ -5,20 +5,12 @@
   font-family: sans-serif;
 }
 
-body {
-  background: linear-gradient(
-    to right,
-    rgba(1, 1, 108, 0.957) 50%,
-    rgb(2, 2, 58)
-    );
-  }
-  
 .nav {
   position: sticky;
   top: 0;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(10px);
   display: flex;
-  transition: all .3s linear;
+  transition: all 0.3s linear;
   z-index: 9999;
   color: white;
   padding: 1.5rem 2rem;
@@ -52,8 +44,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 3rem;
+  padding: 6rem 3rem;
   margin-bottom: 10rem;
+}
+
+.container__main {
+  height: 60rem;
+  background: transparent;
+  width: 100%;
+  /* margin-bottom: 5rem; */
+  background: url(../IMAGES/finex__logo.png);
+  background-size: cover;
 }
 
 .banner img {
@@ -103,6 +104,129 @@ body {
   to {
     transform: translateY(20px);
   }
+}
+
+.second-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem;
+  color: black;
+}
+
+.second-container h1 {
+  margin-bottom: 1.2rem;
+}
+
+.second-container h1 span {
+  color: #00bbf0;
+}
+
+.second-container button {
+  padding: 0.8rem 3rem;
+  border: none;
+  color: #fff;
+  background: #00bbf0;
+  font-size: 1rem;
+}
+
+.second-container button:hover {
+  background: #0e7385;
+  cursor: pointer;
+}
+
+.flex-container {
+  gap: 2rem;
+  display: flex;
+  margin: 3rem;
+}
+
+.box {
+  /* padding: 10px ; */
+  width: 360px;
+  border-radius: 5px;
+  justify-content: center;
+  display: flex;
+  height: 274px;
+  flex-direction: column;
+  background: #f8f8f9;
+  align-items: center;
+  text-align: center;
+  color: black;
+  gap: 1rem;
+}
+
+.box img {
+  height: 70px;
+}
+
+.box h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+}
+.box p {
+  font-size: 15px;
+  line-height: 1.5rem;
+}
+
+.box a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.box a:hover {
+  color: #00bbf0;
+  cursor: pointer;
+}
+
+.third-container {
+  background-color: #00204a;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 5rem;
+  color: #fff;
+}
+
+.third-container h1 {
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.third-container h1 span {
+  color: #00bbf0;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4rem;
+  gap: 2rem;
+}
+.about-container .image img {
+  width: 30rem;
+}
+
+.message p {
+  font-size: 1rem;
+}
+
+.message p:nth-child(2) {
+  margin-bottom: 2rem;
+}
+
+.message button {
+  margin-top: 2rem;
+  padding: 1rem 4rem;
+  color: #fff;
+  background: #00bbf0;
+  border: none;
+  font-size: 1rem;
 }
 
 @media (max-width: 767.98px) {
