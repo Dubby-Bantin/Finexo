@@ -56,7 +56,7 @@
   background: transparent;
   width: 100%;
   /* margin-bottom: 5rem; */
-  background: url(../IMAGES/finex__logo.png);
+  background: url(../IMAGES/banner__background.png);
   background-size: cover;
 }
 
@@ -94,7 +94,7 @@
   position: relative;
   top: -4rem;
   animation-name: bounce;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   animation-direction: alternate-reverse;
@@ -115,6 +115,7 @@
   align-items: center;
   padding: 5rem;
   color: black;
+  text-align: center;
 }
 
 .second-container h1 {
@@ -155,7 +156,9 @@
   flex-direction: column;
   background: #f8f8f9;
   align-items: center;
-  text-align: center;
+
+  /* since the parent has text align center then no need to give the child */
+  /* text-align: center; */
   color: black;
   gap: 1rem;
 
@@ -224,11 +227,12 @@
 .about-container .image img {
   /* width: 30rem; */
   height: 32rem;
+  /* object-fit: cover; */
 }
 
 .message p {
   font-size: 1rem;
-  width: 35rem;
+  /* width: 35rem; */
   line-height: 1.5rem;
   margin-bottom: 2rem;
 }
@@ -291,10 +295,19 @@
 
   .banner div:nth-child(1) p {
     font-size: 14px;
-    width: 26rem;
+    width: 100%;
   }
 
   .banner div:nth-child(1) {
     z-index: 3;
+  }
+
+  .flex-container,
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-container .image img {
+    height: 20rem;
   }
 }
