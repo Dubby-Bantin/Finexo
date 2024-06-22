@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .nav {
@@ -142,18 +145,23 @@
 }
 
 .box {
-  /* padding: 10px ; */
   width: 360px;
   border-radius: 5px;
   justify-content: center;
   display: flex;
-  height: 274px;
+
+  /* removed height  */
+  /* height: 274px; */
   flex-direction: column;
   background: #f8f8f9;
   align-items: center;
   text-align: center;
   color: black;
   gap: 1rem;
+
+  /* changed padding */
+  padding: 1rem 10px;
+  /* padding-top: 5rem; */
 }
 
 .box img {
@@ -165,8 +173,9 @@
   font-weight: 700;
   font-size: 20px;
 }
+
 .box p {
-  font-size: 15px;
+  font-size: 1rem;
   line-height: 1.5rem;
 }
 
@@ -187,6 +196,9 @@
   align-items: center;
   flex-direction: column;
   padding: 5rem;
+
+  /* added gap */
+  gap: 2rem;
   color: #fff;
 }
 
@@ -204,24 +216,30 @@
 .about-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-top: 4rem;
+
+  /* commented margin */
+  /* margin-top: 4rem; */
   gap: 2rem;
 }
 .about-container .image img {
-  width: 30rem;
+  /* width: 30rem; */
+  height: 32rem;
 }
 
 .message p {
   font-size: 1rem;
-}
-
-.message p:nth-child(2) {
+  width: 35rem;
+  line-height: 1.5rem;
   margin-bottom: 2rem;
 }
 
+/* .message p:nth-child(2) {
+  this can be given to all p tags generally
+  margin-bottom: 2rem;
+} */
+
 .message button {
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   padding: 1rem 4rem;
   color: #fff;
   background: #00bbf0;
