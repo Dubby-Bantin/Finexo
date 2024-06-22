@@ -1,0 +1,158 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: linear-gradient(
+    to right,
+    rgba(1, 1, 108, 0.957) 50%,
+    rgb(2, 2, 58)
+    );
+  }
+  
+.nav {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(4px);
+  display: flex;
+  transition: all .3s linear;
+  z-index: 9999;
+  color: white;
+  padding: 1.5rem 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav.active {
+  box-shadow: 1px 2px 0.4rem rgba(134, 133, 133, 0.221);
+}
+
+.nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav ul li:hover {
+  cursor: pointer;
+  color: blue;
+}
+
+.menu {
+  font-size: 2rem;
+  display: none;
+}
+
+.banner {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem;
+  margin-bottom: 10rem;
+}
+
+.banner img {
+  height: 35rem;
+}
+
+.banner div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+}
+
+.banner div:nth-child(1) h1 {
+  width: 10rem;
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.banner div:nth-child(1) p {
+  width: 36em;
+}
+
+.banner div:nth-child(1) button {
+  padding: 1rem 2rem;
+  background: #00bbf0;
+  border: 0;
+  color: white;
+  font-size: 1rem;
+  border-radius: 3px;
+}
+
+.banner div:nth-child(2) img {
+  position: relative;
+  top: -4rem;
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .nav ul {
+    position: absolute;
+    padding-top: 1rem;
+    flex-direction: column;
+    width: 200px;
+    height: 350px;
+    right: 0;
+    display: none;
+    top: 5rem;
+    animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    box-shadow: 1px 2px 5px 1px rgba(2, 92, 120, 0.539);
+  }
+
+  .nav ul.active {
+    display: flex;
+  }
+
+  .menu {
+    cursor: pointer;
+    display: block;
+  }
+
+  @keyframes slide-top {
+    from {
+      transform: translateY(100px);
+    }
+
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  .banner {
+    gap: 4rem;
+    flex-direction: column;
+  }
+
+  .banner div:nth-child(2) img {
+    height: 20em;
+  }
+
+  .banner div:nth-child(1) p {
+    font-size: 14px;
+    width: 26rem;
+  }
+
+  .banner div:nth-child(1) {
+    z-index: 3;
+  }
+}
